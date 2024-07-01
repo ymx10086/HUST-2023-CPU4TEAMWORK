@@ -1,0 +1,901 @@
+#-----------------------------------------------------------
+# Vivado v2023.1.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
+# SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
+# Start of session at: Fri Oct 20 12:41:12 2023
+# Process ID: 27904
+# Current directory: D:/work/cpu4teamwork/cpu/cpu.runs/synth_1
+# Command line: vivado.exe -log UART_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_Top.tcl
+# Log file: D:/work/cpu4teamwork/cpu/cpu.runs/synth_1/UART_Top.vds
+# Journal file: D:/work/cpu4teamwork/cpu/cpu.runs/synth_1\vivado.jou
+# Running On: DESKTOP-5S9J28F, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16893 MB
+#-----------------------------------------------------------
+source UART_Top.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 456.395 ; gain = 159.773
+Command: read_checkpoint -auto_incremental -incremental D:/work/cpu4teamwork/cpu/cpu.srcs/utils_1/imports/synth_1/UART_Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/work/cpu4teamwork/cpu/cpu.srcs/utils_1/imports/synth_1/UART_Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top UART_Top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8516
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1290.098 ; gain = 411.156
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'UART_Top' [D:/work/cpu4teamwork/AllFiles/UART_Top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'UART_Receiver' [D:/work/cpu4teamwork/AllFiles/UART_Receiver.v:4]
+	Parameter CLK_FRE bound to: 100 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PARITY_ON bound to: 0 - type: integer 
+	Parameter PARITY_TYPE bound to: 0 - type: integer 
+	Parameter BAUD_RATE bound to: 9600 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'UART_Receiver' (0#1) [D:/work/cpu4teamwork/AllFiles/UART_Receiver.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Data_Receiver' [D:/work/cpu4teamwork/AllFiles/Data_Receiver.v:3]
+	Parameter BYTES bound to: 3136 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/work/cpu4teamwork/AllFiles/Data_Receiver.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Data_Receiver' (0#1) [D:/work/cpu4teamwork/AllFiles/Data_Receiver.v:3]
+INFO: [Synth 8-6157] synthesizing module 'riscv_datapath_with_float' [D:/work/cpu4teamwork/AllFiles/riscv_datapath_with_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sign_extender' [D:/work/cpu4teamwork/AllFiles/sign_extender.v:23]
+	Parameter FROM_WIDTH bound to: 16 - type: integer 
+	Parameter TO_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extender' (0#1) [D:/work/cpu4teamwork/AllFiles/sign_extender.v:23]
+INFO: [Synth 8-6157] synthesizing module 'divider' [D:/work/cpu4teamwork/AllFiles/divider.v:23]
+	Parameter N bound to: 10000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider' (0#1) [D:/work/cpu4teamwork/AllFiles/divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'divider__parameterized0' [D:/work/cpu4teamwork/AllFiles/divider.v:23]
+	Parameter N bound to: 5000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider__parameterized0' (0#1) [D:/work/cpu4teamwork/AllFiles/divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'divider__parameterized1' [D:/work/cpu4teamwork/AllFiles/divider.v:23]
+	Parameter N bound to: 1000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider__parameterized1' (0#1) [D:/work/cpu4teamwork/AllFiles/divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'divider__parameterized2' [D:/work/cpu4teamwork/AllFiles/divider.v:23]
+	Parameter N bound to: 100 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider__parameterized2' (0#1) [D:/work/cpu4teamwork/AllFiles/divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_41' [D:/work/cpu4teamwork/AllFiles/mux_41.v:23]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_41' (0#1) [D:/work/cpu4teamwork/AllFiles/mux_41.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC_Register' [D:/work/cpu4teamwork/AllFiles/PC_Register.v:23]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'PC_Register' (0#1) [D:/work/cpu4teamwork/AllFiles/PC_Register.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IM_ROM' [D:/work/cpu4teamwork/AllFiles/IM_ROM.v:23]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'D:/work/CO_Team_Data/predict_for_board_with_f.hex' is read successfully [D:/work/cpu4teamwork/AllFiles/IM_ROM.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'IM_ROM' (0#1) [D:/work/cpu4teamwork/AllFiles/IM_ROM.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hardware_controller_with_float' [D:/work/cpu4teamwork/AllFiles/hardware_controller_with_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'controller_with_float' [D:/work/cpu4teamwork/AllFiles/controller_with_float.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'controller_with_float' (0#1) [D:/work/cpu4teamwork/AllFiles/controller_with_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'signals_with_float' [D:/work/cpu4teamwork/AllFiles/signals_with_float.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'signals_with_float' (0#1) [D:/work/cpu4teamwork/AllFiles/signals_with_float.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_controller_with_float' (0#1) [D:/work/cpu4teamwork/AllFiles/hardware_controller_with_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_21' [D:/work/cpu4teamwork/AllFiles/mux_21.v:23]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_21' (0#1) [D:/work/cpu4teamwork/AllFiles/mux_21.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Regifile' [D:/work/cpu4teamwork/AllFiles/Regifile.v:23]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Regifile' (0#1) [D:/work/cpu4teamwork/AllFiles/Regifile.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_21__parameterized0' [D:/work/cpu4teamwork/AllFiles/mux_21.v:23]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_21__parameterized0' (0#1) [D:/work/cpu4teamwork/AllFiles/mux_21.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FRegifile' [D:/work/cpu4teamwork/AllFiles/FRegfile.v:23]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FRegifile' (0#1) [D:/work/cpu4teamwork/AllFiles/FRegfile.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_21__parameterized1' [D:/work/cpu4teamwork/AllFiles/mux_21.v:23]
+	Parameter WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_21__parameterized1' (0#1) [D:/work/cpu4teamwork/AllFiles/mux_21.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sign_extender__parameterized0' [D:/work/cpu4teamwork/AllFiles/sign_extender.v:23]
+	Parameter FROM_WIDTH bound to: 12 - type: integer 
+	Parameter TO_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extender__parameterized0' (0#1) [D:/work/cpu4teamwork/AllFiles/sign_extender.v:23]
+INFO: [Synth 8-6157] synthesizing module 'logical_left' [D:/work/cpu4teamwork/AllFiles/logical_left.v:23]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter NUM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'logical_left' (0#1) [D:/work/cpu4teamwork/AllFiles/logical_left.v:23]
+INFO: [Synth 8-6157] synthesizing module 'logical_left__parameterized0' [D:/work/cpu4teamwork/AllFiles/logical_left.v:23]
+	Parameter DATA_WIDTH bound to: 20 - type: integer 
+	Parameter NUM_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'logical_left__parameterized0' (0#1) [D:/work/cpu4teamwork/AllFiles/logical_left.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sign_extender__parameterized1' [D:/work/cpu4teamwork/AllFiles/sign_extender.v:23]
+	Parameter FROM_WIDTH bound to: 20 - type: integer 
+	Parameter TO_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extender__parameterized1' (0#1) [D:/work/cpu4teamwork/AllFiles/sign_extender.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/work/cpu4teamwork/AllFiles/ALU.v:23]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [D:/work/cpu4teamwork/AllFiles/ALU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU_float' [D:/work/cpu4teamwork/AllFiles/ALU_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Adder' [D:/work/cpu4teamwork/AllFiles/Adder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'addition_normaliser' [D:/work/cpu4teamwork/AllFiles/addition_normaliser.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'addition_normaliser' (0#1) [D:/work/cpu4teamwork/AllFiles/addition_normaliser.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Adder' (0#1) [D:/work/cpu4teamwork/AllFiles/Adder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Subber' [D:/work/cpu4teamwork/AllFiles/Subber.v:23]
+INFO: [Synth 8-6157] synthesizing module 'priority_Encoder' [D:/work/cpu4teamwork/AllFiles/priority_Encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'priority_Encoder' (0#1) [D:/work/cpu4teamwork/AllFiles/priority_Encoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Subber' (0#1) [D:/work/cpu4teamwork/AllFiles/Subber.v:23]
+WARNING: [Synth 8-7071] port 'inf' of module 'Subber' is unconnected for instance 'sub' [D:/work/cpu4teamwork/AllFiles/ALU_float.v:34]
+WARNING: [Synth 8-7023] instance 'sub' of module 'Subber' has 4 connections declared, but only 3 given [D:/work/cpu4teamwork/AllFiles/ALU_float.v:34]
+INFO: [Synth 8-6157] synthesizing module 'Multiplier' [D:/work/cpu4teamwork/AllFiles/Multiplier.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Multiplier' (0#1) [D:/work/cpu4teamwork/AllFiles/Multiplier.v:23]
+WARNING: [Synth 8-7071] port 'inf' of module 'Multiplier' is unconnected for instance 'mult' [D:/work/cpu4teamwork/AllFiles/ALU_float.v:35]
+WARNING: [Synth 8-7023] instance 'mult' of module 'Multiplier' has 6 connections declared, but only 5 given [D:/work/cpu4teamwork/AllFiles/ALU_float.v:35]
+INFO: [Synth 8-6157] synthesizing module 'float_to_i' [D:/work/cpu4teamwork/AllFiles/float_to_i.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'float_to_i' (0#1) [D:/work/cpu4teamwork/AllFiles/float_to_i.v:23]
+INFO: [Synth 8-6157] synthesizing module 'i_to_float' [D:/work/cpu4teamwork/AllFiles/i_to_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'get_precount' [D:/work/cpu4teamwork/AllFiles/get_precount.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'get_precount' (0#1) [D:/work/cpu4teamwork/AllFiles/get_precount.v:23]
+INFO: [Synth 8-6157] synthesizing module 'get_poscount' [D:/work/cpu4teamwork/AllFiles/get_poscount.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'get_poscount' (0#1) [D:/work/cpu4teamwork/AllFiles/get_poscount.v:23]
+INFO: [Synth 8-6157] synthesizing module 'get_positive' [D:/work/cpu4teamwork/AllFiles/get_positive.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'get_positive' (0#1) [D:/work/cpu4teamwork/AllFiles/get_positive.v:23]
+INFO: [Synth 8-6157] synthesizing module 'get_negative' [D:/work/cpu4teamwork/AllFiles/get_negative.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'get_negative' (0#1) [D:/work/cpu4teamwork/AllFiles/get_negative.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'i_to_float' (0#1) [D:/work/cpu4teamwork/AllFiles/i_to_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ui_to_float' [D:/work/cpu4teamwork/AllFiles/ui_to_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'get_positive_for_ui' [D:/work/cpu4teamwork/AllFiles/get_positive_for_ui.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'get_positive_for_ui' (0#1) [D:/work/cpu4teamwork/AllFiles/get_positive_for_ui.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ui_to_float' (0#1) [D:/work/cpu4teamwork/AllFiles/ui_to_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'check_type' [D:/work/cpu4teamwork/AllFiles/check_type.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'check_type' (0#1) [D:/work/cpu4teamwork/AllFiles/check_type.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_float' (0#1) [D:/work/cpu4teamwork/AllFiles/ALU_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'get_num_for_sh' [D:/work/cpu4teamwork/AllFiles/get_num_for_sh.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'get_num_for_sh' (0#1) [D:/work/cpu4teamwork/AllFiles/get_num_for_sh.v:23]
+INFO: [Synth 8-6157] synthesizing module 'get_num_for_sb' [D:/work/cpu4teamwork/AllFiles/get_num_for_sb.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'get_num_for_sb' (0#1) [D:/work/cpu4teamwork/AllFiles/get_num_for_sb.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MEM_COMBINES' [D:/work/cpu4teamwork/AllFiles/MEM_COMBINES.v:23]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'D:/work/CO_Team_Data/fc1_weight.hex' is read successfully [D:/work/cpu4teamwork/AllFiles/MEM_COMBINES.v:39]
+INFO: [Synth 8-3876] $readmem data file 'D:/work/CO_Team_Data/fc1_bias.hex' is read successfully [D:/work/cpu4teamwork/AllFiles/MEM_COMBINES.v:40]
+INFO: [Synth 8-3876] $readmem data file 'D:/work/CO_Team_Data/fc2_weight.hex' is read successfully [D:/work/cpu4teamwork/AllFiles/MEM_COMBINES.v:41]
+INFO: [Synth 8-3876] $readmem data file 'D:/work/CO_Team_Data/fc2_bias.hex' is read successfully [D:/work/cpu4teamwork/AllFiles/MEM_COMBINES.v:42]
+INFO: [Synth 8-3876] $readmem data file 'D:/work/CO_Team_Data/input.hex' is read successfully [D:/work/cpu4teamwork/AllFiles/MEM_COMBINES.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_COMBINES' (0#1) [D:/work/cpu4teamwork/AllFiles/MEM_COMBINES.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_21__parameterized2' [D:/work/cpu4teamwork/AllFiles/mux_21.v:23]
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_21__parameterized2' (0#1) [D:/work/cpu4teamwork/AllFiles/mux_21.v:23]
+INFO: [Synth 8-6157] synthesizing module 'zero_extender' [D:/work/cpu4teamwork/AllFiles/zero_extender.v:23]
+	Parameter FROM_WIDTH bound to: 16 - type: integer 
+	Parameter TO_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'zero_extender' (0#1) [D:/work/cpu4teamwork/AllFiles/zero_extender.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_41__parameterized0' [D:/work/cpu4teamwork/AllFiles/mux_41.v:23]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_41__parameterized0' (0#1) [D:/work/cpu4teamwork/AllFiles/mux_41.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sign_extender__parameterized2' [D:/work/cpu4teamwork/AllFiles/sign_extender.v:23]
+	Parameter FROM_WIDTH bound to: 8 - type: integer 
+	Parameter TO_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sign_extender__parameterized2' (0#1) [D:/work/cpu4teamwork/AllFiles/sign_extender.v:23]
+INFO: [Synth 8-6157] synthesizing module 'zero_extender__parameterized0' [D:/work/cpu4teamwork/AllFiles/zero_extender.v:23]
+	Parameter FROM_WIDTH bound to: 8 - type: integer 
+	Parameter TO_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'zero_extender__parameterized0' (0#1) [D:/work/cpu4teamwork/AllFiles/zero_extender.v:23]
+INFO: [Synth 8-6157] synthesizing module 'register' [D:/work/cpu4teamwork/AllFiles/register.v:23]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register' (0#1) [D:/work/cpu4teamwork/AllFiles/register.v:23]
+INFO: [Synth 8-6157] synthesizing module 'counter' [D:/work/cpu4teamwork/AllFiles/counter.v:23]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (0#1) [D:/work/cpu4teamwork/AllFiles/counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_41__parameterized1' [D:/work/cpu4teamwork/AllFiles/mux_41.v:23]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_41__parameterized1' (0#1) [D:/work/cpu4teamwork/AllFiles/mux_41.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DFF' [D:/work/cpu4teamwork/AllFiles/DFF.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DFF' (0#1) [D:/work/cpu4teamwork/AllFiles/DFF.v:23]
+INFO: [Synth 8-6157] synthesizing module 'INTR_handler' [D:/work/cpu4teamwork/AllFiles/INTR_handler.v:23]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'INTR_handler' (0#1) [D:/work/cpu4teamwork/AllFiles/INTR_handler.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clr_generator' [D:/work/cpu4teamwork/AllFiles/clr_generator.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clr_generator' (0#1) [D:/work/cpu4teamwork/AllFiles/clr_generator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'register__parameterized0' [D:/work/cpu4teamwork/AllFiles/register.v:23]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register__parameterized0' (0#1) [D:/work/cpu4teamwork/AllFiles/register.v:23]
+INFO: [Synth 8-6157] synthesizing module 'INTStack' [D:/work/cpu4teamwork/AllFiles/INTStack.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'INTStack' (0#1) [D:/work/cpu4teamwork/AllFiles/INTStack.v:23]
+INFO: [Synth 8-6157] synthesizing module 'EPCStack' [D:/work/cpu4teamwork/AllFiles/EPCStack.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'EPCStack' (0#1) [D:/work/cpu4teamwork/AllFiles/EPCStack.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_datapath_with_float' (0#1) [D:/work/cpu4teamwork/AllFiles/riscv_datapath_with_float.v:23]
+INFO: [Synth 8-6157] synthesizing module 'UART_Transmitter' [D:/work/cpu4teamwork/AllFiles/UART_Transmitter.v:4]
+	Parameter CLK_FRE bound to: 100 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PARITY_ON bound to: 0 - type: integer 
+	Parameter PARITY_TYPE bound to: 0 - type: integer 
+	Parameter BAUD_RATE bound to: 9600 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'UART_Transmitter' (0#1) [D:/work/cpu4teamwork/AllFiles/UART_Transmitter.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/work/cpu4teamwork/AllFiles/UART_Top.v:127]
+INFO: [Synth 8-6157] synthesizing module '_7Seg_Driver_Choice' [D:/work/cpu4teamwork/AllFiles/_7Seg_Driver_Choice.v:23]
+INFO: [Synth 8-6157] synthesizing module 'divider__parameterized3' [D:/work/cpu4teamwork/AllFiles/divider.v:23]
+	Parameter N bound to: 10000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider__parameterized3' (0#1) [D:/work/cpu4teamwork/AllFiles/divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'counter__parameterized0' [D:/work/cpu4teamwork/AllFiles/counter.v:23]
+	Parameter DATA_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter__parameterized0' (0#1) [D:/work/cpu4teamwork/AllFiles/counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'decoder_38' [D:/work/cpu4teamwork/AllFiles/decoder_38.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_38' (0#1) [D:/work/cpu4teamwork/AllFiles/decoder_38.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seg7' [D:/work/cpu4teamwork/AllFiles/seg7.v:23]
+INFO: [Synth 8-226] default block is never used [D:/work/cpu4teamwork/AllFiles/seg7.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'seg7' (0#1) [D:/work/cpu4teamwork/AllFiles/seg7.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pattern' [D:/work/cpu4teamwork/AllFiles/pattern.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pattern' (0#1) [D:/work/cpu4teamwork/AllFiles/pattern.v:23]
+INFO: [Synth 8-6155] done synthesizing module '_7Seg_Driver_Choice' (0#1) [D:/work/cpu4teamwork/AllFiles/_7Seg_Driver_Choice.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Top' (0#1) [D:/work/cpu4teamwork/AllFiles/UART_Top.v:3]
+WARNING: [Synth 8-6014] Unused sequential element start_bit_reg was removed.  [D:/work/cpu4teamwork/AllFiles/UART_Receiver.v:165]
+WARNING: [Synth 8-6014] Unused sequential element stop_bit_reg was removed.  [D:/work/cpu4teamwork/AllFiles/UART_Receiver.v:195]
+WARNING: [Synth 8-6014] Unused sequential element Fdata_reg was removed.  [D:/work/cpu4teamwork/AllFiles/MEM_COMBINES.v:69]
+WARNING: [Synth 8-3848] Net IntrRequest in module/entity riscv_datapath_with_float does not have driver. [D:/work/cpu4teamwork/AllFiles/riscv_datapath_with_float.v:74]
+WARNING: [Synth 8-7137] Register CPU_Data_reg in module UART_Top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/work/cpu4teamwork/AllFiles/UART_Top.v:80]
+WARNING: [Synth 8-7137] Register treceivedata_reg in module UART_Top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/work/cpu4teamwork/AllFiles/UART_Top.v:162]
+WARNING: [Synth 8-7137] Register tx_data_reg in module UART_Top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/work/cpu4teamwork/AllFiles/UART_Top.v:97]
+WARNING: [Synth 8-7137] Register w_tx_done_reg in module UART_Top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/work/cpu4teamwork/AllFiles/UART_Top.v:98]
+WARNING: [Synth 8-7129] Port clk in module clr_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IntrRequest in module clr_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25087] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25086] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25085] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25084] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25083] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25082] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25081] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25080] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25079] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25078] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25077] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25076] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25075] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25074] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25073] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25072] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25071] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25070] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25069] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25068] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25067] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25066] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25065] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25064] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25063] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25062] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25061] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25060] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25059] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25058] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25057] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25056] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25055] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25054] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25053] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25052] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25051] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25050] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25049] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25048] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25047] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25046] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25045] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25044] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25043] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25042] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25041] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25040] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25039] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25038] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25037] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25036] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25035] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25034] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25033] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25032] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25031] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25030] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25029] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25028] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25027] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25026] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25025] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25024] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25023] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25022] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25021] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25020] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25019] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25018] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25017] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25016] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25015] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25014] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25013] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25012] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25011] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25010] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25009] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25008] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25007] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25006] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25005] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25004] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25003] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25002] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25001] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[25000] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[24999] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[24998] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[24997] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[24996] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[24995] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[24994] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[24993] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[24992] in module MEM_COMBINES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port InputData[24991] in module MEM_COMBINES is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1535.270 ; gain = 656.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1535.270 ; gain = 656.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1535.270 ; gain = 656.328
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1536.859 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/work/cpu4teamwork/AllFiles/UART.xdc]
+Finished Parsing XDC File [D:/work/cpu4teamwork/AllFiles/UART.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/work/cpu4teamwork/AllFiles/UART.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/UART_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1924.387 ; gain = 0.387
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.518 . Memory (MB): peak = 1924.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1924.387 ; gain = 1045.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1924.387 ; gain = 1045.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1924.387 ; gain = 1045.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1924.387 ; gain = 1045.445
+---------------------------------------------------------------------------------
+UART_Top__GCB3UART_Top__GCB2UART_Top__GCB1riscv_datapath_with_float__GCB1datapath__33_ALU__GDALU__GB0---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1924.387 ; gain = 1045.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:41 . Memory (MB): peak = 1924.387 ; gain = 1045.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:43 ; elapsed = 00:00:43 . Memory (MB): peak = 1924.387 ; gain = 1045.445
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : changed
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++------+----------------+------------+----------+----------+
+|      |Changed Modules |Replication |Instances |Changed % |
++------+----------------+------------+----------+----------+
+|1     |MEM_COMBINES    |           1|        66|    0.0443|
++------+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 149026
+   Resynthesis Design Size (number of cells) : 37560
+   Resynth % : 25.2037,  Reuse % : 74.7963
+
+3. Reference Checkpoint Information
+
++-----------------------------------------------------------------------------------------+
+| DCP Location:  | D:/work/cpu4teamwork/cpu/cpu.srcs/utils_1/imports/synth_1/UART_Top.dcp |
++-----------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2023.1.1 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+----------------------------------------+------------+----------+
+|      |RTL Partition                           |Replication |Instances |
++------+----------------------------------------+------------+----------+
+|1     |riscv_datapath_with_float__GCB0         |           1|     12472|
+|2     |reg__77_UART_Top                        |           1|     25088|
+|3     |ALU__GB0_#REUSE#                        |           1|         0|
+|4     |datapath__33_ALU__GD_#REUSE#            |           1|         0|
+|5     |riscv_datapath_with_float__GCB1_#REUSE# |           1|         0|
+|6     |UART_Top__GCB1_#REUSE#                  |           1|         0|
+|7     |UART_Top__GCB2_#REUSE#                  |           1|         0|
+|8     |UART_Top__GCB3_#REUSE#                  |           1|         0|
++------+----------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   3 Input   25 Bit       Adders := 3     
+	   2 Input   25 Bit       Adders := 4     
+	   2 Input   24 Bit       Adders := 2     
+	   2 Input   23 Bit       Adders := 1     
+	   4 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 12    
+	   3 Input    8 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	            25088 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
++---RAMs : 
+	            4096K Bit	(131072 X 32 bit)          RAMs := 1     
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   47 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 22    
+	   2 Input   25 Bit        Muxes := 8     
+	  26 Input   25 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 8     
+	   2 Input   23 Bit        Muxes := 2     
+	   3 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 8     
+	   3 Input    7 Bit        Muxes := 1     
+	  20 Input    6 Bit        Muxes := 1     
+	  26 Input    5 Bit        Muxes := 1     
+	  33 Input    5 Bit        Muxes := 3     
+	  32 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 23    
+	  21 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 2     
+	  19 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP Mantissa_mult, operation Mode is: A*B.
+DSP Report: operator Mantissa_mult is absorbed into DSP Mantissa_mult.
+DSP Report: operator Mantissa_mult is absorbed into DSP Mantissa_mult.
+DSP Report: Generating DSP Mantissa_mult, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Mantissa_mult is absorbed into DSP Mantissa_mult.
+DSP Report: operator Mantissa_mult is absorbed into DSP Mantissa_mult.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (alu_f/add/\norm1/out_m_reg[0] )
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__0' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__1' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__2' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__3' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__4' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__5' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__6' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__7' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__8' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__9' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__10' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__11' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__12' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__13' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__14' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__15' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__16' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__17' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__18' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__19' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__20' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__21' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__22' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__23' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__24' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__25' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__26' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__27' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__28' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+INFO: [Synth 8-3886] merging instance 'i_0/mc/ram_reg_mux_sel_a_pos_0__29' (FD) to 'i_0/mc/ram_reg_mux_sel_a_pos_0__30'
+WARNING: [Synth 8-3332] Sequential element (norm1/out_m_reg[0]) is unused and will be removed from module Adder__6.
+WARNING: [Synth 8-3332] Sequential element (i_m_reg[24]) is unused and will be removed from module Adder__6.
+WARNING: [Synth 8-3332] Sequential element (out_reg[31]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[30]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[29]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[28]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[27]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[26]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[25]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[24]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[23]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[22]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[21]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[20]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[19]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[18]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[17]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[16]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[15]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[14]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[13]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[12]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[11]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[10]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[9]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[8]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[7]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[6]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[5]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[4]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[3]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[2]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[1]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (out_reg[0]) is unused and will be removed from module i_to_float__1.
+WARNING: [Synth 8-3332] Sequential element (Smaller_reg) is unused and will be removed from module ALU_float__1.
+WARNING: [Synth 8-3332] Sequential element (BiggerOrEqual_reg) is unused and will be removed from module ALU_float__1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:32 . Memory (MB): peak = 1924.387 ; gain = 1045.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++--------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                     | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|riscv_datapath_with_float__GCB0 | mc/ram_reg | 128 K x 32(READ_FIRST) | W | R |                        |   |   | Port A           | 0      | 128    | 
++--------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++--------------------------------+-------------------+-----------+----------------------+--------------+
+|Module Name                     | RTL Object        | Inference | Size (Depth x Width) | Primitives   | 
++--------------------------------+-------------------+-----------+----------------------+--------------+
+|riscv_datapath_with_float__GCB0 | FRegfile/regs_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++--------------------------------+-------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Multiplier  | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier  | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:01:02 ; elapsed = 00:01:34 . Memory (MB): peak = 1924.387 ; gain = 1045.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:47 . Memory (MB): peak = 2011.109 ; gain = 1132.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:56 . Memory (MB): peak = 2042.824 ; gain = 1163.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++--------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                     | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|riscv_datapath_with_float__GCB0 | mc/ram_reg | 128 K x 32(READ_FIRST) | W | R |                        |   |   | Port A           | 0      | 128    | 
++--------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++--------------------------------+-------------------+-----------+----------------------+--------------+
+|Module Name                     | RTL Object        | Inference | Size (Depth x Width) | Primitives   | 
++--------------------------------+-------------------+-----------+----------------------+--------------+
+|riscv_datapath_with_float__GCB0 | FRegfile/regs_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++--------------------------------+-------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_1_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPUi_6/mc/ram_reg_3_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:27 ; elapsed = 00:02:16 . Memory (MB): peak = 2176.551 ; gain = 1297.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:01:28 ; elapsed = 00:02:17 . Memory (MB): peak = 2176.551 ; gain = 1297.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_1_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CPU/mc/ram_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:36 ; elapsed = 00:02:25 . Memory (MB): peak = 2176.551 ; gain = 1297.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:36 ; elapsed = 00:02:25 . Memory (MB): peak = 2176.551 ; gain = 1297.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:36 ; elapsed = 00:02:26 . Memory (MB): peak = 2176.551 ; gain = 1297.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:37 ; elapsed = 00:02:26 . Memory (MB): peak = 2176.551 ; gain = 1297.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:37 ; elapsed = 00:02:26 . Memory (MB): peak = 2176.551 ; gain = 1297.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:37 ; elapsed = 00:02:26 . Memory (MB): peak = 2176.551 ; gain = 1297.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B          | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | PCIN>>17+A*B | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | C+A*B        | 17     | 15     | 48     | -      | 47     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ALU         | A*B          | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | PCIN>>17+A*B | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | PCIN>>17+A*B | 17     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | PCIN>>17+A*B | 15     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | C+A*B        | 17     | 15     | 48     | -      | 47     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Multiplier  | A*B          | 24     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier  | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     5|
+|2     |CARRY4   |  1492|
+|3     |DSP48E1  |    13|
+|4     |LUT1     |   405|
+|5     |LUT2     |   719|
+|6     |LUT3     |  2803|
+|7     |LUT4     |   644|
+|8     |LUT5     |  3010|
+|9     |LUT6     |  4429|
+|10    |MUXF7    |   309|
+|11    |MUXF8    |    58|
+|12    |RAM32M   |    10|
+|13    |RAM32X1D |     4|
+|14    |RAMB36E1 |   128|
+|106   |FDCE     |   185|
+|107   |FDPE     |    10|
+|108   |FDRE     |  1166|
+|109   |LD       |   138|
+|110   |IBUF     |     6|
+|111   |OBUF     |    18|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:37 ; elapsed = 00:02:26 . Memory (MB): peak = 2176.551 ; gain = 1297.609
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:02:11 . Memory (MB): peak = 2176.551 ; gain = 908.492
+Synthesis Optimization Complete : Time (s): cpu = 00:01:37 ; elapsed = 00:02:27 . Memory (MB): peak = 2176.551 ; gain = 1297.609
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.208 . Memory (MB): peak = 2176.551 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2152 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 160 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2176.551 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 152 instances were transformed.
+  LD => LDCE: 106 instances
+  LD => LDCE (inverted pins: G): 32 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete | Checksum: ce6cc0
+INFO: [Common 17-83] Releasing license: Synthesis
+288 Infos, 148 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:46 ; elapsed = 00:02:37 . Memory (MB): peak = 2176.551 ; gain = 1695.281
+INFO: [Common 17-1381] The checkpoint 'D:/work/cpu4teamwork/cpu/cpu.runs/synth_1/UART_Top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2176.551 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file UART_Top_utilization_synth.rpt -pb UART_Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 20 12:44:13 2023...
